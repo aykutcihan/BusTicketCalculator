@@ -1,0 +1,84 @@
+
+1- Why would we prefer "wrapper class" in Ticket class?
+
+Wrapper classes can hold null values, making them useful for checking for null values or debugging.
+If we want a class's variables to have null as their initial value, we can use wrapper classes.
+Using a reference type like Integer or Double to initialize a variable with a null value may be more appropriate
+ when a variable's value is undefined or uninitialized.
+For example, if we create a Ticket class and the person who purchased the ticket has not yet been assigned a seat number,
+ we can initialize the seat number variable to null.
+This way, we can check for the null value to determine whether the variable has been assigned a value yet.
+While it is possible to use primitive data types and assign a default value like 0 to variables initially,
+ this may not be appropriate in cases where the variable's value is undefined or uninitialized.
+
+
+2- What is the rol of start() method ?
+
+start() method is a special method that is called at the beginning of a Java program.
+This method includes tasks such as creating, starting, and managing objects that will be used throughout the program.
+The start() method is typically called inside the main() method.
+
+The Factory Method design pattern is often used to implement the start() method in large and complex applications,
+as it helps to make the code more readable and manageable. This method typically hides the details of object creation and initialization,
+and requires less code to create and start the necessary objects.
+
+First, in the main method, objects are created from the Bus and Ticket classes and assigned to variables named "bus" and "ticket".
+Then, the start() method is called with the bus and ticket objects passed as parameters.
+
+In the start() method, the price and seat number of the Ticket object are set and the printTicket method is called.
+In the printTicket method, the plate number, distance, ticket type, seat number, and price of the Bus object are printed.
+
+The start() method is a special method used in multithreaded programming in Java.
+However, in this example, the start() method has nothing to do with multithreaded programming.
+It is simply a method name and a static method that can be called by the main method.
+
+The start() method is passed the Bus and Ticket objects to access them and use them in the bus method.
+The start() method sets the price and seat number of the Ticket object, which is done by the setPrice() and setSeat() methods.
+
+Overall, the start() method is a helper method used in this example to make the main method more readable.
+The start() method itself is not necessary for the application to run and could have been named differently,
+but the name "start" makes the method more descriptive and understandable.
+
+
+3- The reason why Bus object is passed as a parameter to the printTicket method is:
+
+The printTicket method needs to access the Bus class's numberPlate property to display the bus plate number on the ticket.
+Since the printTicket method is defined in the Ticket class, it doesn't have direct access to the Bus class's properties.
+To access the necessary information from the Bus class, an instance of the Bus class is passed as a parameter to the printTicket method.
+This allows the printTicket method to access the Bus object's numberPlate property and correctly display the bus plate number on the ticket.
+
+4- Why do we use a constructor in the Bus class but not in the Ticket class?
+
+A constructor is a special method that is called when an object of a class is created.
+A constructor contains a code block that needs to be executed when an object is created.
+Constructors can be used to assign initial values to class properties.
+
+Whether to use a constructor or not in a class depends on the needs and purpose of the class.
+Here are some advantages of using a constructor:
+
+Creating objects becomes easier.
+Initial values can be assigned to class properties.
+Code repetition can be avoided.
+Objects can be easily modified.
+However, using a constructor may also have some disadvantages:
+
+Code complexity may increase.
+If code repetition cannot be avoided, using a constructor may not be beneficial.
+Class variables can be modified with values from client code.
+
+Therefore, using a constructor or not depends on the needs and purpose of the class.
+If initial values need to be assigned to class properties when an object is created or
+if there are special code blocks that need to be executed when an object is created, a constructor may be necessary.
+But it is not always mandatory to use a constructor.
+
+In the case of the Bus class, a constructor is used because the properties of
+the Bus object need to be assigned initial values when it is created. Therefore, using a constructor in the Bus class is a correct decision.
+
+In the case of the Ticket class, a constructor is not used because there is no need to assign initial values to its properties when
+the Ticket object is created. The Ticket object is created with the data entered in the start() method,
+and this data is assigned to the properties of the Ticket object. Therefore, not using a constructor
+in the Ticket class is an appropriate approach.
+
+In conclusion, we do not need to use a constructor for every class.
+Whether to use a constructor or not in a class depends on the needs and purpose of the class.
+We used a constructor in the Bus class because it was necessary, but we did not need to use one in the Ticket class.
