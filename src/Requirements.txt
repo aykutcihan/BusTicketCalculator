@@ -1,3 +1,4 @@
+
 Project: app that calculates bus ticket price based on distance and conditions
          Distance from User (KM), age and trip type (One Way, Round-Round)
          Get seat number information.

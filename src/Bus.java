@@ -26,6 +26,4 @@ public class Bus {
         this.seats = seats;
     }
 
-
-
 }

@@ -36,18 +36,14 @@ public class Ticket {
     public void setPrice(Double price) {
         this.price = price;
     }
-    public void printTicket (Bus bus) {
-        System.out.println("------- Ticket Details----------");
+
+    public void printTicket(Bus bus) {
+        System.out.println("-------Ticket Details-------");
         System.out.println("Total amount: " + price);
-        System.out.println("Bus plate:" + bus.getNumberPlate());
-        System.out.println("Distance:" + distance);
-        System.out.println("Trip type: " + (typeNo==1 ? "One direction": "Round-Trip"));
-        System.out.println("seat no: " + seatNo);
+        System.out.println("Bus plate: " + bus.getNumberPlate());
+        System.out.println("Distance: " + distance);
+        System.out.println("Trip type: " + (typeNo==1 ? "One direction" : "Round-Trip"));
+        System.out.println("Seat no: " + seatNo);
         System.out.println("We wish you a pleasant journey...");
-
     }
-
-
-
-
 }
